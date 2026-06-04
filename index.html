@@ -378,9 +378,10 @@
                 return;
             }
 
-            // 记录脏话（仅记录第一个字符频率）
+            // 记录话语
+            let deepTranslation = '';
             if (swear !== "") {
-                recordSwear(swear);
+            deepTranslation = `\n\n🗣️ 你刚才说了：「${swear}」\n要不要再来一句？或者，就这么待着也行。`;
             }
 
             // 构建反射内容（去掉“分析”，只重复和陪伴）
